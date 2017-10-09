@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"></meta>
+    <title>Hello world</title>
+</head>
+<body>
+<!--<p th:inline="text">Hello, [[${name}]]!</p>-->
+
+<ol th:each="user : ${users}">
+    <li><b>Name</b>: <span th:text="${user.getName()}"/>, <b>Job</b>: <span th:text="${user.getJob()}"/></li>
+</ol>
+</body>
+</html>
